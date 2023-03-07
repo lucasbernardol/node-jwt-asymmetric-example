@@ -1,0 +1,29 @@
+@TOKEN = eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzaWQiOiJmMDJlNzIxZC02MzM1LTRiZjctODUwNC1jNjMwNWQ5MzZiYzIiLCJpYXQiOjE2NzgyMjUzNDgsImV4cCI6MTY3ODIyNTk0OCwic3ViIjoiNDhkNDFiZjQtYmEzOC00OTNlLWFlYWMtYjk3N2RhNmI0Zjc2IiwianRpIjoiY2VmMjg2YzEtYjY2YS00ZjI1LTgzNmItYThiMDZmYmI3NzMwIn0.aQmku3R6kpvcG5LwiAWoF8i_0gDjPGKZz9zGOeTY196dzaNhYoatCBMt23iXYjdrw4lI56eSkWdUL0NoaVWkeEb3C0d4I2J19WszJTQRdGrsvzLODi2Tjm_pDRDquBu9SOLvUhUJIv7f58G_hgeWSvTNoqrNhrhjMvY-4QHTq7jQtWpGhtoTJEWGUjE6FcBjh9MafecmnmSMczLaQU55nL5TqoaSAh54VQLo0F--BZFYdlyNog3ckCh6kDSLjiaAysLf_L1cZpV-m1l9BTquT_yfvFCg8Sr2s17hH4jM06jqyRFwPO2NGYbuzpKqhiBdCrbSyZ5aJbj_87MPOklgbyE2eetWUjNt8ADhG0FiC5NrrG87EcevTTc-552K-jWGviDZxZCmQjGeRH8WKHZnczX4ZF4C57BQmrgAbo_JYQ2swnGTp25IljGtGghyia627jHTn2nOu3YBNJUqnC6RQSD252wnnmpGqqZhN4GG1c02SxNcdqZRQZ02cyG1N8hz
+
+### ------- SESSIONS ------- ###
+
+### BLACKLIST
+GET http://localhost:3333/sessions/blacklisted HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+### LOGOUT
+PATCH http://localhost:3333/sessions/logout HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+Accept: application/json
+
+### ------- USERS ------- ###
+
+### USERS
+GET http://localhost:3333/users HTTP/1.1
+Authorization: Bearer {{TOKEN}}
+Content-Type: application/json
+Accept: application/json
+
+### SIGN-IN
+POST http://localhost:3333/users/sign-in HTTP/1.1
+Content-Type: application/json
+Accept: application/json
+
+{}
